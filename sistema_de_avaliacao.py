@@ -11,7 +11,8 @@ from sarimax_process import previsao_sarimax
 st.set_page_config(
     page_title="Sistema de Avaliação de Arboviroses",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded",
+    page_icon="./assets/mosquito.png"
 )
 
 st.markdown("""
@@ -20,6 +21,16 @@ st.markdown("""
     
     html, body, [class*="css"] {
         font-family: 'Roboto', sans-serif;
+    }
+
+    div.stButton > button:first-child {
+        background-color: #203366;
+        color: white;
+        border: none;
+    }
+    div.stButton > button:first-child:hover {
+        background-color: #909ed0;
+        color: white;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -34,9 +45,18 @@ modelos = {
     "Zika": zika,
 }
 
+datas_inicios = {
+    "Dengue": pd.Timestamp('2026-08-30'),
+    "Chikungunya": pd.Timestamp('2026-08-23'),
+    "Zika": pd.Timestamp('2024-02-18'),
+}
+
+def limitar_data(arbo):
+    pass
+
 def predicao(data_futuro, modelo):
     if modelo == "Dengue":
-        resultado_casos = previsao_sarimax(modelos["Dengue"], data_futuro, './dados/dengue_tratado.csv')
+        resultado_casos = previsao_sarimax(modelos["Dengue"], data_futuro, './dados/dengue_tratado.csv', '2026-08-30')
         print(resultado_casos["previsao"])
         with row1:
             st.write("Casos")
@@ -48,7 +68,7 @@ def predicao(data_futuro, modelo):
         print(resultado_casos["incidencia"])
 
     if modelo == "Zika":
-        resultado_casos = previsao_sarimax(modelos["Zika"], data_futuro, './dados/zika_tratado.csv')
+        resultado_casos = previsao_sarimax(modelos["Zika"], data_futuro, './dados/zika_tratado.csv','2024-02-18')
         with row1:
             st.write("Casos")
             st.line_chart(resultado_casos)
@@ -58,7 +78,7 @@ def predicao(data_futuro, modelo):
             st.line_chart(resultado_casos['incidencia'])
 
     if modelo == "Chikungunya":
-        resultado_casos = previsao_sarimax(modelos["Chikungunya"], data_futuro, './dados/chikungunya_tratado.csv')
+        resultado_casos = previsao_sarimax(modelos["Chikungunya"], data_futuro, './dados/chikungunya_tratado.csv', '2026-08-23')
         with row1:
             st.write("Casos")
             st.line_chart(resultado_casos)
@@ -67,11 +87,15 @@ def predicao(data_futuro, modelo):
             st.write("Incidência por 100.000 habitantes")
             st.line_chart(resultado_casos['incidencia'])
 
+
+col1, col2, col3 = st.columns([1.5, 1, 1])
+with col2:
+    st.image("./assets/mosquito.png", width=200)
+
 opcao = st.selectbox("Escolha uma Arbovirose", list(modelos.keys()))
 modelo_selecionado = modelos[opcao]
 
-st.write(f"Data inicial: 2026-08-23")
-data_selecionada = st.date_input("Selecione uma data futura para a previsão", date.today(), min_value=date(2026, 8, 23))
+data_selecionada = st.date_input("Selecione uma data futura para a previsão", date.today(), min_value=datas_inicios[opcao])
 
 st.button("Fazer previsão", type="primary", on_click=predicao, args=(data_selecionada, opcao))
 
