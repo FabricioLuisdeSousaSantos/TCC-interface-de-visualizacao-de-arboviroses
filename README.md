@@ -19,21 +19,21 @@ A avaliação foi realizada com profissionais do CIEVS-SAJ por meio da aplicaç�
 
 A seguir, um passo a passo simples de como utilizar o sistema.
 
-![Sistema de avaliação - Tela geral 2026](Figuras/shot01.png)
+![Sistema de avaliação - Tela geral 2026](assets/shot01.png)
 
 *Figure: Sistema de avaliação - Tela geral 2026*
 
 Na figura acima é mostrada a interface principal do sistema, nele há o *checkbox* de seleção de arbovirose e um *input* para a seleção da data de previsão futura. Abaixo deles o botão de *"Fazer Previsão"* onde o usuário pode fazer a predição, que aparecerá nos gráficos abaixo.
 
-![Sistema de avaliação - Seleção de arbovirose 2026](Figuras/shot02.png)
+![Sistema de avaliação - Seleção de arbovirose 2026](assets/shot02.png)
 
 *Figure: Sistema de avaliação - Seleção de arbovirose 2026*
 
-![Sistema de avaliação - Seleção da data de previsão 2026](Figuras/shot04.png)
+![Sistema de avaliação - Seleção da data de previsão 2026](assets/shot04.png)
 
 *Figure: Sistema de avaliação - Seleção da data de previsão 2026*
 
-![Sistema de avaliação - Resultados em gráficos 2026](Figuras/shot03.png)
+![Sistema de avaliação - Resultados em gráficos 2026](assets/shot03.png)
 
 *Figure: Sistema de avaliação - Resultados em gráficos 2026*
 
