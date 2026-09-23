@@ -39,7 +39,10 @@ Na figura acima é mostrada a interface principal do sistema, nele há o *checkb
 
 Na figura acima são mostrados os gráficos de casos e incidência por 100.000 habitantes da janela de previsão selecionada pelo usuário.
 
-
-
+## Instruções
+Na pasta *dados* ficam os datasets do projeto incluido a planilia de avaliação do *CIEVS-SAJ*.
+Já em *gráficos* ficam as figuras de gráficos dos dados, usados no projeto.
+Em *modelos* ficam os modelos SARIMAX usados no sistema web no formato .pkl.
+*sistema_de_avaliacao.py* é o arquivo principal do sistema que deve ser rodado com o seguinte comando no terminal: "streamlit run sistema_de_avaliacao.py".
 
 
