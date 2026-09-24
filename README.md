@@ -39,10 +39,40 @@ Na figura acima é mostrada a interface principal do sistema, nele há o *checkb
 
 Na figura acima são mostrados os gráficos de casos e incidência por 100.000 habitantes da janela de previsão selecionada pelo usuário.
 
-## Instruções
-Na pasta *dados* ficam os datasets do projeto incluido a planilia de avaliação do *CIEVS-SAJ*.
-Já em *gráficos* ficam as figuras de gráficos dos dados, usados no projeto.
+## Instruções do sistema
 Em *modelos* ficam os modelos SARIMAX usados no sistema web no formato .pkl.
-*sistema_de_avaliacao.py* é o arquivo principal do sistema que deve ser rodado com o seguinte comando no terminal: "streamlit run sistema_de_avaliacao.py".
+*sistema_de_avaliacao.py* é o arquivo principal do sistema que deve ser rodado com o seguinte comando no terminal: "streamlit run sistema_de_avaliacao.py". A versão do Python usada é 3.10, com as dependências no arquivo *requirements.txt*.
+
+## Perguntas de pesquisa
+A planilia de resultados da pesquisa com os memebros do CIEVS-SAJ se encontram na pasta *dados/Questionario_de_avaliação_do_sistema_de_predição_de_Arboviroses_(respostas).xlsx*
+
+Segue abaixo a lista de perguntas do formulário que foi usado.
+
+![Sistema de avaliação - Resultados em gráficos 2026](./assets/pesquisa/1.png)
+
+![Sistema de avaliação - Resultados em gráficos 2026](./assets/pesquisa/2.png)
+
+![Sistema de avaliação - Resultados em gráficos 2026](./assets/pesquisa/3.png)
+
+![Sistema de avaliação - Resultados em gráficos 2026](./assets/pesquisa/4.png)
+
+![Sistema de avaliação - Resultados em gráficos 2026](./assets/pesquisa/5.png)
+
+![Sistema de avaliação - Resultados em gráficos 2026](./assets/pesquisa/6.png)
+
+![Sistema de avaliação - Resultados em gráficos 2026](./assets/pesquisa/7.png)
+
+![Sistema de avaliação - Resultados em gráficos 2026](./assets/pesquisa/8.png)
+
+![Sistema de avaliação - Resultados em gráficos 2026](./assets/pesquisa/9.png)
+
+![Sistema de avaliação - Resultados em gráficos 2026](./assets/pesquisa/10.png)
+
+![Sistema de avaliação - Resultados em gráficos 2026](./assets/pesquisa/11.png)
+
+![Sistema de avaliação - Resultados em gráficos 2026](./assets/pesquisa/12.png)
+
+![Sistema de avaliação - Resultados em gráficos 2026](./assets/pesquisa/13.png)
+
 
 
